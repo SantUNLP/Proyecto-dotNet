@@ -16,3 +16,4 @@ C:\Users\San Rojas\Desktop\INFO UNLP\.NET\Proyecto\CentroEventos\CentroEventos.C
 C:\Users\San Rojas\Desktop\INFO UNLP\.NET\Proyecto\CentroEventos\CentroEventos.Console\obj\Debug\net8.0\CentroEventos.Console.pdb
 C:\Users\San Rojas\Desktop\INFO UNLP\.NET\Proyecto\CentroEventos\CentroEventos.Console\obj\Debug\net8.0\CentroEventos.Console.genruntimeconfig.cache
 C:\Users\San Rojas\Desktop\INFO UNLP\.NET\Proyecto\CentroEventos\CentroEventos.Console\obj\Debug\net8.0\ref\CentroEventos.Console.dll
+C:\Users\San Rojas\Desktop\INFO UNLP\.NET\Proyecto\CentroEventos\CentroEventos.Console\obj\Debug\net8.0\CentroEventos.Console.sourcelink.json

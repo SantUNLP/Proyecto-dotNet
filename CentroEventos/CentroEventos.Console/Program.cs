@@ -1,11 +1,19 @@
 ﻿using CentroEventos.Aplicacion;
+using CentroEventos.Repositorios;
 
-IServicioAutorizacion SAP = new ServicioAutorizacionProvisorio();
+IServicioAutorizacion SerivicioAutorizacion = new ServicioAutorizacionProvisorio();
+IRepositorioUsuario Repositorio = new RepositorioUsuarios();
+var darAlta = new UsuarioAltaUseCase(SerivicioAutorizacion, Repositorio);
+var listarUsuarios = new UsuariosListarUseCase(Repositorio);
 
-UsuarioAltaUseCase Alta = new UsuarioAltaUseCase();
-UsuarioModificacionUseCase Modificacion = new UsuarioModificacionUseCase();
-UsuarioBajaUseCase Baja = new UsuarioBajaUseCase();
+Usuario user1 = new Usuario("santiago@gmail.com","1234","Santiago");
 
-Alta.Ejecutar(SAP);
-Modificacion.Ejecutar(SAP);
-Baja.Ejecutar(SAP);
+darAlta.Ejecutar(user1);
+
+List <Usuario> lista = listarUsuarios.Ejecutar();
+
+foreach (Usuario user in lista)
+{
+    Console.WriteLine(user.ToString());
+}
+

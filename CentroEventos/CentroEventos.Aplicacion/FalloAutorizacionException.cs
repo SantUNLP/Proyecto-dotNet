@@ -2,9 +2,9 @@ using System;
 
 namespace CentroEventos.Aplicacion;
 
-public class FalloAutorizacionException
+public class FalloAutorizacionException : Exception
 {
-    public FalloAutorizacionException(string st) => throw new Exception(st);
+    public FalloAutorizacionException(string st) : base(st) { }
 }
 
 /*

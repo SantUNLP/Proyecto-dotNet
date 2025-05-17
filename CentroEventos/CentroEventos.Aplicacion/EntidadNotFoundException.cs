@@ -2,9 +2,9 @@ using System;
 
 namespace CentroEventos.Aplicacion;
 
-public class EntidadNotFoundException
+public class EntidadNotFoundException : Exception
 {
-    public EntidadNotFoundException(string st) => throw new Exception(st);
+    public EntidadNotFoundException(string st) : base(st) { }
 }
 
 /*

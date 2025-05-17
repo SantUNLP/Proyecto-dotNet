@@ -2,9 +2,9 @@ using System;
 
 namespace CentroEventos.Aplicacion;
 
-public class CupoExcedidoException
+public class CupoExcedidoException : Exception
 {
-    public CupoExcedidoException(string st) => throw new Exception(st);
+    public CupoExcedidoException(string st) : base(st) { }
 }
 
 /*

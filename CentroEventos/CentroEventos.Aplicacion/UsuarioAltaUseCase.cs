@@ -2,14 +2,20 @@ using System;
 
 namespace CentroEventos.Aplicacion;
 
-public class UsuarioAltaUseCase
+public class UsuarioAltaUseCase (IServicioAutorizacion ISAP, IRepositorioUsuario IRU)
+// Inyección de dependencias, aunque no existe el repositorio de Usuarios!
 {
-    public void Ejecutar(IServicioAutorizacion ISAP /*IRepositorioUsuarios IRU (No existe)*/){
-        if (ISAP.PoseeElPermiso(1,Permiso.UsuarioAlta)){
-            Console.WriteLine("Usuario dado de alta!");
+    public void Ejecutar(Usuario usuario){
+        if (ISAP.PoseeElPermiso(1, Permiso.UsuarioAlta))
+        // SE ASUME QUE SIEMPRE LE MANDAMOS EL ID = 1, CASO CONTRARIO ENTENDEMOS QUE SE TIRA UNA EXCEPCIÓN
+        {
+            IRU.agregarUsuario(usuario);
             // Dar de alta un usuario al sistema, usar VALIDACIONES y EXCEPCIONES
-        } else {
-                new FalloAutorizacionException("No posee permisos!"); // Todas las excepciones se hacen en la clase UseCase
+            // Consultar al repositorio si se repite el usuario
+        }
+        else
+        {
+            throw new FalloAutorizacionException("No posee permisos para dar de Alta!"); // Todas las excepciones se hacen en la clase UseCase
         }
     }
 }

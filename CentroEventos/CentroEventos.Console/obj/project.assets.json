@@ -11,6 +11,19 @@
         "runtime": {
           "bin/placeholder/CentroEventos.Aplicacion.dll": {}
         }
+      },
+      "CentroEventos.Repositorios/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "CentroEventos.Aplicacion": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CentroEventos.Repositorios.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CentroEventos.Repositorios.dll": {}
+        }
       }
     }
   },
@@ -19,11 +32,17 @@
       "type": "project",
       "path": "../CentroEventos.Aplicacion/CentroEventos.Aplicacion.csproj",
       "msbuildProject": "../CentroEventos.Aplicacion/CentroEventos.Aplicacion.csproj"
+    },
+    "CentroEventos.Repositorios/1.0.0": {
+      "type": "project",
+      "path": "../CentroEventos.Repositorios/CentroEventos.Repositorios.csproj",
+      "msbuildProject": "../CentroEventos.Repositorios/CentroEventos.Repositorios.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "CentroEventos.Aplicacion >= 1.0.0"
+      "CentroEventos.Aplicacion >= 1.0.0",
+      "CentroEventos.Repositorios >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -53,6 +72,9 @@
           "projectReferences": {
             "C:\\Users\\San Rojas\\Desktop\\INFO UNLP\\.NET\\Proyecto\\CentroEventos\\CentroEventos.Aplicacion\\CentroEventos.Aplicacion.csproj": {
               "projectPath": "C:\\Users\\San Rojas\\Desktop\\INFO UNLP\\.NET\\Proyecto\\CentroEventos\\CentroEventos.Aplicacion\\CentroEventos.Aplicacion.csproj"
+            },
+            "C:\\Users\\San Rojas\\Desktop\\INFO UNLP\\.NET\\Proyecto\\CentroEventos\\CentroEventos.Repositorios\\CentroEventos.Repositorios.csproj": {
+              "projectPath": "C:\\Users\\San Rojas\\Desktop\\INFO UNLP\\.NET\\Proyecto\\CentroEventos\\CentroEventos.Repositorios\\CentroEventos.Repositorios.csproj"
             }
           }
         }

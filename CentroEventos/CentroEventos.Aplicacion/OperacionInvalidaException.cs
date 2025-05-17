@@ -2,9 +2,9 @@ using System;
 
 namespace CentroEventos.Aplicacion;
 
-public class OperacionInvalidaException
+public class OperacionInvalidaException : Exception
 {
-    public OperacionInvalidaException(string st) => throw new Exception(st);
+    public OperacionInvalidaException(string st) : base(st) { }
 }
 
 /*

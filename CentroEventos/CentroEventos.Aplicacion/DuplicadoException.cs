@@ -2,9 +2,9 @@ using System;
 
 namespace CentroEventos.Aplicacion;
 
-public class DuplicadoException
+public class DuplicadoException : Exception
 {
-    public DuplicadoException(string st) => throw new Exception(st);
+    public DuplicadoException(string st) : base(st) { }
 }
 
 /*
